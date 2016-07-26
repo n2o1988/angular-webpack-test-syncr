@@ -1,0 +1,13 @@
+<main>
+  <h1 class="title">Hello from Angular !</h1>
+
+  <!-- Images (and assets) are parsed and loaded from within the public directory -->
+  <img src="/img/logo.png">
+  <button ng-click="app.authenticateFlickr()" ng-show="!app.flickrSettings.authenticated">Auth Flickr</button>
+  <input type="file" name="file" id="file">
+  <button ng-click="app.google()" ng-disabled="!app.file || !app.googleSettings.authenticated">Google</button>
+  <button ng-click="app.flickr()" ng-disabled="!app.file || !app.flickrSettings.authenticated">Flickr</button>
+</main>
+<footer>
+  <a ng-href="{{app.url}}">Webpack Angular Starter</a>
+</footer>
